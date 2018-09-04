@@ -1,6 +1,8 @@
 require_relative "character"
 require_relative "world"
 require_relative "challenge"
+require_relative "game_helper"
+include GameHelper
 
 class Story
 #ACTIONS = [:left, :right, :straight_ahead, :fight, :flee] etc.
@@ -29,11 +31,6 @@ class Story
             puts "You linger too long at the cross-roads and are crushed to death by a passing donkey-cart."
         end
     end
-end
-
-# deaths
-def dead # refactor to print dead(reason)
-    exit(0)
 end
 
 character = Character.new()

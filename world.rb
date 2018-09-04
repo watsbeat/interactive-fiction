@@ -1,3 +1,6 @@
+require_relative "game_helper"
+include GameHelper
+
 class World
     def forest_location
         puts "You follow the path east into the enchanted forest. Night falls and you get very tired."
@@ -6,8 +9,7 @@ class World
         if choice == "yes"
             witch_cottage
         else
-            puts "You really should have gone inside! A bear attacks you out of nowhere. You are viciously mauled to death."
-            dead
+            GameHelper.dead("forest_location")
         end
     end
     def witch_cottage
@@ -24,8 +26,7 @@ class World
             puts "Beware! The Pirate King doesn't treat losers nicely."
             Challenge.gamble
         else
-            puts "The Pirate King doesn't like cowards. He beats you to a bloody pulp."
-            dead
+            GameHelper.dead("seaside_location") 
         end
     end
     def mountain_location
@@ -36,8 +37,7 @@ class World
             puts "Brave traveller!"
             dragon_lair
         else 
-            puts "You freeze to death in a snow blizzard."
-            dead
+            GameHelper.dead("mountain_location") # no outputting dead method - typo misspelt mountain
         end
     end
     def dragon_lair
