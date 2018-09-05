@@ -28,7 +28,7 @@ class Story
             go_to = World.new()
             go_to.mountain_location
         else
-            puts "You linger too long at the cross-roads and are crushed to death by a passing donkey-cart."
+            GameHelper.dead("start")
         end
     end
 end

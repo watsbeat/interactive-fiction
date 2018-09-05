@@ -2,6 +2,8 @@ module GameHelper
     def dead(reason)
         # scoring?
         case reason
+        when "start"
+            puts "You linger too long at the cross-roads and are crushed to death by a passing donkey-cart."
         when "forest_location"
             puts "You really should have gone inside! A bear attacks you out of nowhere. You are viciously mauled to death."
         when "dragon_lair"

@@ -7,6 +7,7 @@ class Challenge
         riddle_answer = gets.chomp
         if riddle_answer.include? "echo"
             puts "Riddle solved!"
+            # win outcome
         else
             GameHelper.dead("riddle")
         end
@@ -19,6 +20,7 @@ class Challenge
         gapfill_answer = gets.chomp
         if gapfill_answer == "is"
             puts "You cast the spell perfectly and shrink the dragon to the size of a field-mouse."
+            # win outcome
         else
             GameHelper.dead("dragon_lair")
         end
