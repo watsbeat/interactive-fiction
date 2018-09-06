@@ -10,10 +10,12 @@ module GameHelper
             puts "You linger too long at the cross-roads and are crushed by a passing donkey-cart."
         when "forest_location"
             puts "You really should have gone inside! A bear attacks you out of nowhere. You are viciously mauled."
-        when "dragon_lair"
+        when "hangman"
             puts "You mess up the spell and get melted in the dragon's breath. Tough luck!" # interpolate character name?
         when "riddle"
             puts "Wrong guess! The witch drags you to her oven and thrusts you into its fiery depths."
+        when "mathsgame"
+            puts "The Pirate King is an unexpectedly good mathematician. He decides to celebrate his victory by making you walk the plank."
         when "mountain_location"
             puts "You freeze in a snow blizzard."
         when "seaside_location"
