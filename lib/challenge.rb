@@ -8,22 +8,27 @@ require_relative "ui"
 class Challenge
     def self.riddle 
         UI.new.draw_frame({:text => $story.riddle_intro})
+        puts " "
         puts "WHAT AM I?"
         riddle_answer = gets.chomp
         if riddle_answer.include? "echo"
             puts " "
             GameHelper.win("riddle")
+            puts " "
             $story_ended = true
         else
             puts " "
             GameHelper.dead("riddle")
+            puts " "
             $story_failed = true
         end
     end
     def self.mathgame
         extend MathGame
+        puts " "
         MathGame.play
         GameHelper.win("mathgame")
+        puts " "
         $story_ended = true
     end
     def self.hangman

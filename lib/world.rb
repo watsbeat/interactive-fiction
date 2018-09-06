@@ -7,22 +7,23 @@ class World
         puts "Do you knock on the door?"
         choice = $stdin.gets.chomp
         if choice == "yes"
-            puts " "
             Challenge.riddle
         else
+            puts " "
             GameHelper.dead("forest_location")
+            puts " "
             $story_failed = true
         end
     end
     def seaside_location
-        puts " "
         puts "Are you game to gamble?"
         choice = $stdin.gets.chomp
         if choice == "yes" # put this text into story class and pull
-            puts " "
             Challenge.mathgame
         else
-            GameHelper.dead("seaside_location") 
+            puts " "
+            GameHelper.dead("seaside_location")
+            puts " "
             $story_failed = true
         end
     end
@@ -30,10 +31,11 @@ class World
         puts "Do you venture inside?"
         choice = $stdin.gets.chomp
         if choice == "yes" # put this text into story class and pull
-            puts " "
             Challenge.hangman
         else 
+            puts " "
             GameHelper.dead("mountain_location")
+            puts " "
             $story_failed = true
         end
     end

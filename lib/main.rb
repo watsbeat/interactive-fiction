@@ -49,16 +49,19 @@ while running
     when "clear", "cls" # not working! How do we clear the console? 
         ui.clear
     when "west", "w", "left", "l"
+        ui.new_line
         ui.draw_frame({:text => $story.seaside_description})
         ui.new_line
         go_to = World.new()
         go_to.seaside_location
     when "north", "n", "up", "u"
+        ui.new_line
         ui.draw_frame({:text => $story.mountain_description})
         ui.new_line
         go_to = World.new()
         go_to.mountain_location
     when "east", "e", "right", "r"
+        ui.new_line
         ui.draw_frame({:text => $story.forest_description})
         ui.new_line
         go_to = World.new()
@@ -70,8 +73,6 @@ while running
         ui.help
     else
         puts ui.cmd_not_found
-        puts ui.get_cmd # loop back to beginning to allow action on cmd input
-        puts " "
     end
 
 # Player has won the Ruby Quest!
