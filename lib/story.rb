@@ -9,7 +9,7 @@ class Story
         " ",
         "You have chosen to embark upon this quest. You stand outside the King's castle, contemplating the road ahead.",
         " ",
-        "After walking for a while, you reach a cross-roads. There are three paths: west, north, and south.",
+        "After walking for a while, you reach a cross-roads. There are three paths: west, north, and east.",
     ]
 
     STORY_PLAYER_DEAD = [

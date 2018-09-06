@@ -159,15 +159,14 @@ win = 0
     puts "CONGRATULATIONS! You got the word #{word_array.to_s.upcase}"
     print "You've won #{win} times. "
   end   
-
-  turn += 1
-  puts "Type \"new\" to play again, type \"return\" to exit"
-  print "> "
-  rematch = gets.chomp.downcase.strip
+    turn += 1
+    puts "Type \"new\" to play again, type \"return\" to exit"
+    print "> "
+    rematch = gets.chomp.downcase.strip
   else
-  puts "Please type either \"new\" OR \"return\""
-  rematch = gets.chomp.downcase.strip
-  end
+    puts "Please type either \"new\" OR \"return\""
+    rematch = gets.chomp.downcase.strip
+    end
 end
 end
 end

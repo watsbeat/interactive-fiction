@@ -15,6 +15,7 @@ class World
         end
     end
     def seaside_location
+        puts " "
         puts "Are you game to gamble?"
         choice = $stdin.gets.chomp
         if choice == "yes" # put this text into story class and pull
