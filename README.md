@@ -1,4 +1,4 @@
-# Ruby Quest for kids
+# Ruby Quest for Kids
 ### A Fairy-Tale Interactive Fiction
 
 Written by Caitlin & Michelle
