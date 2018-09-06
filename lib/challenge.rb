@@ -31,12 +31,12 @@ class Challenge
         puts " "
         extend Hangman
         Hangman.play
-        if Hangman.win 
+        #if Hangman.play
             GameHelper.win("hangman")
             $story_ended = true
-        else
-            GameHelper.dead("hangman")
-            $story_failed = true
-        end
+        #else
+            # GameHelper.dead("hangman")
+            # $story_failed = true
+        # end
     end
 end

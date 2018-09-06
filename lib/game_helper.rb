@@ -24,7 +24,6 @@ module GameHelper
     def win(reason) # if you win the challenge
         case reason
         when "riddle"
-            UI.new.draw_frame({:text => GameHelper.win("riddle")})
             puts "You solved the riddle! The witch rewards you with the ruby."
         when "mathsgame"
             puts "You take the Pirate King for all he's worth. He grudgingly hands over the ruby."
