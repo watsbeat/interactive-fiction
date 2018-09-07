@@ -26,14 +26,14 @@ world = World.new
 ui.welcome
 
 # ask name
-name = ui.ask("What's your name?", /\w/)
+name = ui.ask("What's your name?", /\w/) # how does this relate to Character @name? Learn more about instance variable
 
 # create a new player
 player = Character.new({name: name, world: world})
 
 # show intro story
 ui.new_line
-$story = Story.new
+$story = Story.new # had to make new Story instance a global variable, to call its methods in other classes :( Improve?
 $story_ended = false
 $story_failed = false
 ui.draw_frame({text: $story.intro})

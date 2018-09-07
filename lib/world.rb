@@ -9,7 +9,7 @@ class World
         if choice == "yes" or "y" or "okay" # use case when instead, to handle more input anomalies
             Challenge.riddle
         else
-            puts " "
+            puts " " # is there a more elegant way to put padding around story text & dead/win cases etc.
             GameHelper.dead("forest_location")
             puts " "
             $story_failed = true
@@ -40,3 +40,6 @@ class World
         end
     end
 end
+
+# EXTENSIBILITY IDEAS
+# Create location subclasses for World, instead of having locations as methods

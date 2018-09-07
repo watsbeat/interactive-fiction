@@ -20,7 +20,7 @@ class Challenge
             puts " "
             GameHelper.dead("riddle")
             puts " "
-            $story_failed = true
+            $story_failed = true # couldn't use Story class method here w/o making global variable in main.rb - improve
         end
     end
     def self.mathgame
