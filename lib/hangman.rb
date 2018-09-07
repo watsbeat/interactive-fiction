@@ -155,7 +155,7 @@ win = 0
   end # of first guess until
 
   if letters_remaining == []
-    win += 1
+    win += 1 # What am I trying to do here? Get this to work.
     puts "CONGRATULATIONS! You got the word #{word_array.to_s.upcase}"
     print "You've won #{win} times. "
   end   

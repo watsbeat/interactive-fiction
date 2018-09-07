@@ -11,7 +11,7 @@ class Challenge
         puts " "
         puts "WHAT AM I?"
         riddle_answer = gets.chomp
-        if riddle_answer.include? "echo"
+        if riddle_answer.include? "echo" # use ternary operator here instead?
             puts " "
             GameHelper.win("riddle")
             puts " "
