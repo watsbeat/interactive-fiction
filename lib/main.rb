@@ -29,14 +29,14 @@ ui.welcome
 name = ui.ask("What's your name?", /\w/)
 
 # create a new player
-player = Character.new({:name => name, :world => world})
+player = Character.new({name: name, world: world})
 
 # show intro story
 ui.new_line
 $story = Story.new
 $story_ended = false
 $story_failed = false
-ui.draw_frame({:text => $story.intro})
+ui.draw_frame({text: $story.intro})
 
 #MAIN INPUT LOOP
 running = 1
@@ -50,19 +50,19 @@ while running
         ui.clear
     when "west", "w", "left", "l"
         ui.new_line
-        ui.draw_frame({:text => $story.seaside_description})
+        ui.draw_frame({text: $story.seaside_description})
         ui.new_line
         go_to = World.new()
         go_to.seaside_location
     when "north", "n", "up", "u"
         ui.new_line
-        ui.draw_frame({:text => $story.mountain_description})
+        ui.draw_frame({text: $story.mountain_description})
         ui.new_line
         go_to = World.new()
         go_to.mountain_location
     when "east", "e", "right", "r"
         ui.new_line
-        ui.draw_frame({:text => $story.forest_description})
+        ui.draw_frame({text: $story.forest_description})
         ui.new_line
         go_to = World.new()
         go_to.forest_location
@@ -77,13 +77,13 @@ while running
 
 # Player has won the Ruby Quest!
     if $story_ended #true
-        ui.draw_frame({:text => $story.ending})
+        ui.draw_frame({text: $story.ending})
         ui.new_line
         running = false
 
 # Player has died tragically!
     elsif $story_failed # true
-        ui.draw_frame({:text => $story.failed})
+        ui.draw_frame({text: $story.failed})
         ui.new_line
         running = false
     end
