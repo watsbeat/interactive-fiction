@@ -1,7 +1,3 @@
-# require_relative "story"
-# require_relative "character"
-# require_relative "ui"
-
 module GameHelper
     def dead(reason) # if you lose the challenge
         # scoring?

@@ -6,7 +6,7 @@ class World
     def forest_location
         puts "Do you knock on the door?"
         choice = $stdin.gets.chomp
-        if choice == "yes" or "y" or "okay" # use case when instead, to handle more input anomalies
+        if choice == "yes" # use case when instead, to handle more input anomalies
             Challenge.riddle
         else
             puts " " # is there a more elegant way to put padding around story text & dead/win cases etc.
@@ -18,7 +18,7 @@ class World
     def seaside_location
         puts "Are you game to gamble?"
         choice = $stdin.gets.chomp
-        if choice == "yes" or "y" or "okay" # use case when instead, to handle more input anomalies
+        if choice == "yes" # use case when instead, to handle more input anomalies
             Challenge.mathgame
         else
             puts " "
@@ -30,7 +30,7 @@ class World
     def mountain_location
         puts "Do you venture inside?"
         choice = $stdin.gets.chomp
-        if choice == "yes" or "y" or "okay" # use case when instead, to handle more input anomalies
+        if choice == "yes" # use case when instead, to handle more input anomalies
             Challenge.hangman
         else 
             puts " "

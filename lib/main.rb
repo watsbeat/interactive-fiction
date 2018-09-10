@@ -21,17 +21,17 @@ include GameHelper
 ui = UI.new
 world = World.new
 
-# clear the screen and print welcome message
-#ui.clear
+# Clear the screen & print welcome message
+# ui.clear - get this to work!
 ui.welcome
 
-# ask name
+# Ask user name
 name = ui.ask("What's your name?", /\w/) # how does this relate to Character @name? Learn more about instance variable
 
-# create a new player
+# Create a new player
 player = Character.new({name: name, world: world})
 
-# show intro story
+# Once upon a time... Show story intro
 ui.new_line
 $story = Story.new # had to make new Story instance a global variable, to call its methods in other classes :( Improve?
 $story_ended = false
